@@ -4,22 +4,8 @@ import MidArea from "./components/MidArea";
 import PreviewArea from "./components/PreviewArea";
 import { DragDropContext } from "react-beautiful-dnd";
 import { connect } from "react-redux";
-import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
-
-function App({ complist, update_list }) {
-  const classes = useStyles();
+function App({ complist }) {
   const onDragEnd = (result) => {
     let element = result.draggableId.split("-")[0];
 
